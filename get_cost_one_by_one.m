@@ -1,0 +1,1 @@
+function cost  = get_cost(X,target,thetas)  for(x = X)      endfor  predicted = X*thetas;  squared_error = (predicted-target).^2;  cost = (1/(2*size(X,1)))*sum(squared_error);end

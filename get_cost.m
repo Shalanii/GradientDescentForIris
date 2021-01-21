@@ -1,6 +1,8 @@
-function cost  = get_cost(target,X,weights)
-  weights_by_transpose_x = weights*transpose(X);
-  errors = weights_by_transpose_x - target;
-  squared_error = errors.^2;
+function cost  = get_cost(X,target,thetas)
+  predicted = X*thetas;
+  squared_error = (predicted-target).^2;
+  %disp("SQ ERR");
+  %disp(squared_error);
   cost = (1/(2*size(X,1)))*sum(squared_error);
+  %cost = squared_error;
 end
